@@ -129,27 +129,67 @@ a:focus {
   color: #c3c3c3;
 }
 
-/* Disclaimer */
-.disclaimer {
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 40px; 
-  font-size: 16px; 
-  color: #999;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #333;
 }
 
-/* Style list items within the disclaimer */
-.disclaimer ul {
-  list-style-type: none;
-  padding-left: 0; 
+.disclaimer h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.disclaimer .good-list {
+.highlights {
+  display: flex;
+  justify-content: center; /* Updated to center the blocks */
+  margin-top: 20px;
+}
+
+.highlight {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px; /* Added margin to separate the blocks */
+}
+
+.highlight .good-list {
   color: rgb(37, 178, 37);
-  border: #4e5057;
 }
 
-.disclaimer .not-good-list {
+.highlight .not-good-list {
   color: rgb(232, 72, 72);
+}
+
+.api-key-container {
+  margin-top: 30px;
+}
+
+.api-key-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.start-chat-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-chat-button:hover {
+  background-color: #0056b3;
 }
 
 /* API Key Container */

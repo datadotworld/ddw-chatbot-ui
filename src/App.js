@@ -86,46 +86,49 @@ const App = () => {
     <div className="App">
       <h1 className="logo"></h1>
       {!showChat ? (
-        <div>
-          <div class="disclaimer">
-            <p>
-              Welcome to version 1.0 of the alpha test for our AI Support Bot! Currently, we only use the product documentation page as reference (more coming soon).
-            </p>
-            <p>
-              <span class="good-list">Some things the bot is REALLY good at:</span>
-            </p>
-            <ul class="good-list">
-              <li>Getting you the documentation fast and with context</li>
-              <li>Providing thorough explanations of our tools and features</li>
-            </ul>
-            <p>
-              <span class="not-good-list">Some things the bot is NOT good at (yet):</span>
-            </p>
-            <ul class="not-good-list">
-              <li>Remembering questions (messages are individually processed)</li>
-              <li>Staying under the character limit (sometimes the bot will cut itself off)</li>
-            </ul>
-            <p>
-              Got weird answers? Tell Jack Compton on Slack. Share your question and the bot's response to help us improve!
-              Thanks for your help as we make this app even cooler. 
-            </p>
-            <p>
-            Happy chatting! 😄
-            </p>
-          </div>
-          <div className="api-key-container">
-            <input
-              type="text"
-              className="api-key-input"
-              placeholder="Enter your OpenAI API key"
-              value={apiKey}
-              onChange={handleApiKeyChange}
-            />
-            <button className="start-chat-button" onClick={handleStartChat}>
-              Start Chat
-            </button>
-          </div>
-        </div>
+        <div className="landing-page">
+  <div className="disclaimer">
+    <h1>Welcome to the AI Support Bot</h1>
+    <p>
+      Discover fast and context-rich answers with our AI-powered Support Bot! Version 1.0 is here for alpha testing, leveraging product documentation as a reference.
+    </p>
+    <div className="highlights">
+      <div className="highlight">
+        <span className="good-list">🚀 What the Bot Excels At:</span>
+        <ul>
+          <li>Instant Access to Summarized Documentation</li>
+          <li>Thorough Explanations of Tools & Features</li>
+        </ul>
+      </div>
+      <div className="highlight">
+        <span className="not-good-list">⚠️ Where We're Improving:</span>
+        <ul>
+          <li>Individual Message Processing</li>
+          <li>Occasional Character Limit Constraints</li>
+        </ul>
+      </div>
+    </div>
+    <p>
+      Encounter unexpected responses? Share your feedback with Jack Compton on Slack. Help us enhance the bot by sharing your questions and responses!
+      Together, we'll make this app even cooler!
+    </p>
+    <p>
+      Happy chatting! 😄
+    </p>
+  </div>
+  <div className="api-key-container">
+    <input
+      type="text"
+      className="api-key-input"
+      placeholder="Enter your OpenAI API key"
+      value={apiKey}
+      onChange={handleApiKeyChange}
+    />
+    <button className="start-chat-button" onClick={handleStartChat}>
+      Start Chat
+    </button>
+  </div>
+</div>
       ) : (
         <div className="chat-container" ref={chatContainerRef}>
           {messages.map((message, index) => (
