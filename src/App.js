@@ -18,24 +18,40 @@ const App = () => {
     }
   }, [messages]);
 
-  const convertLinks = (text) => {
+  const convertAndFormatText = (text) => {
     const urlRegex = /(https?:\/\/[^\s]+)(\.\s|\s|$)/g;
-    const parts = text.split(urlRegex);
-
-    return parts.map((part, index) =>
-      urlRegex.test(part) ? (
-        <a
-          key={index}
-          href={part.trim().replace(/\.$/, '')}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {part.trim().replace(/\.$/, '')}
-        </a>
-      ) : (
-        <React.Fragment key={index}>{part}</React.Fragment>
-      )
-    );
+    const paragraphs = text.split('\n'); // Split by single line breaks
+  
+    return paragraphs.map((paragraph, index) => {
+      if (/^\d+\.\s/.test(paragraph)) {
+        // Handle numerical lists
+        return (
+          <div key={index} style={{ marginTop: '10px', marginBottom: '10px' }}>
+            {paragraph}
+          </div>
+        );
+      } else {
+        const parts = paragraph.split(urlRegex);
+        return (
+          <div key={index}>
+            {parts.map((part, partIndex) =>
+              urlRegex.test(part) ? (
+                <a
+                  key={partIndex}
+                  href={part.trim().replace(/\.$/, '')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {part.trim().replace(/\.$/, '')}
+                </a>
+              ) : (
+                <React.Fragment key={partIndex}>{part}</React.Fragment>
+              )
+            )}
+          </div>
+        );
+      }
+    });
   };
 
   const handleApiKeyChange = (e) => {
@@ -67,7 +83,7 @@ const App = () => {
         setLoadingMessage('');
 
         const response = await askQuestion(inputText, apiKey);
-        const formattedResponse = convertLinks(response);
+        const formattedResponse = convertAndFormatText(response);
 
         setMessages((prevMessages) => [
           ...prevMessages,
