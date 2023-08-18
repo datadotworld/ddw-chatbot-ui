@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-ddw-doc-chatbot/static/css/main.c425b3e8.css",
-    "main.js": "/react-ddw-doc-chatbot/static/js/main.4be4aac5.js",
+    "main.js": "/react-ddw-doc-chatbot/static/js/main.43758823.js",
     "static/media/logo-full-blue.png": "/react-ddw-doc-chatbot/static/media/logo-full-blue.d5b4585941d65737d6cb.png",
     "index.html": "/react-ddw-doc-chatbot/index.html",
     "main.c425b3e8.css.map": "/react-ddw-doc-chatbot/static/css/main.c425b3e8.css.map",
-    "main.4be4aac5.js.map": "/react-ddw-doc-chatbot/static/js/main.4be4aac5.js.map"
+    "main.43758823.js.map": "/react-ddw-doc-chatbot/static/js/main.43758823.js.map"
   },
   "entrypoints": [
     "static/css/main.c425b3e8.css",
-    "static/js/main.4be4aac5.js"
+    "static/js/main.43758823.js"
   ]
 }
