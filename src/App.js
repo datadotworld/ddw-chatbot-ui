@@ -159,7 +159,7 @@ const App = () => {
   </div>
   <div className="api-key-container">
     <input
-      type="text"
+      type="password"
       className="api-key-input"
       placeholder="Enter your OpenAI API key"
       value={apiKey}
