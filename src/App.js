@@ -23,17 +23,30 @@ const App = () => {
     const paragraphs = text.split('\n'); // Split by single line breaks
   
     return paragraphs.map((paragraph, index) => {
+      const isLastParagraph = index === paragraphs.length - 1;
+  
       if (/^\d+\.\s/.test(paragraph)) {
         // Handle numerical lists
         return (
-          <div key={index} style={{ marginTop: '10px', marginBottom: '10px' }}>
+          <div
+            key={index}
+            style={{
+              marginTop: '10px',
+              marginBottom: isLastParagraph ? '0' : '10px', // No margin for last paragraph
+            }}
+          >
             {paragraph}
           </div>
         );
       } else {
         const parts = paragraph.split(urlRegex);
         return (
-          <div key={index}>
+          <div
+            key={index}
+            style={{
+              marginBottom: isLastParagraph ? '0' : '20px', // No margin for last paragraph
+            }}
+          >
             {parts.map((part, partIndex) =>
               urlRegex.test(part) ? (
                 <a
@@ -53,6 +66,7 @@ const App = () => {
       }
     });
   };
+  
 
   const handleApiKeyChange = (e) => {
     setApiKey(e.target.value);
