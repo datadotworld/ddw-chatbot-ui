@@ -82,7 +82,9 @@ const App = () => {
     setInputText(e.target.value);
   };
 
-  const handleSendMessage = async () => {
+  const handleSendMessage = async (e) => {
+    e.preventDefault();
+    
     if (inputText.trim() !== '') {
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -171,19 +173,21 @@ const App = () => {
               {message.text}
             </div>
           ))}
-          <div className="textbox-container">
-            <input
-              type="text"
-              className="textbox"
-              placeholder="Send a message"
-              value={inputText}
-              onChange={handleInputChange}
-              ref={inputRef}
-            />
-            <button className="send-button" onClick={handleSendMessage}>
-              Send
-            </button>
-          </div>
+            <form onSubmit={handleSendMessage}>
+              <div className="textbox-container">
+                <input
+                  type="text"
+                  className="textbox"
+                  placeholder="Send a message"
+                  value={inputText}
+                  onChange={handleInputChange}
+                  ref={inputRef}
+                />
+                <button className="send-button" type="submit">
+                  Send
+                </button>
+              </div>
+            </form>
           {loading && (
             <div className="loading-message">
               <span className="loading-dot"></span>
