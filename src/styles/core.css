@@ -166,6 +166,12 @@ a:focus {
   color: rgb(232, 72, 72);
 }
 
+.recent-updates {
+  max-width: 745px; 
+  margin: 10px auto; /* Center the block horizontally */
+  text-align: center;
+}
+
 .api-key-container {
   margin-top: 30px;
 }

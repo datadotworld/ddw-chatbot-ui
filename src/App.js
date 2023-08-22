@@ -84,7 +84,7 @@ const App = () => {
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
-    
+
     if (inputText.trim() !== '') {
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -118,11 +118,11 @@ const App = () => {
     <div className="App">
       <h1 className="logo"></h1>
       {!showChat ? (
-        <div className="landing-page">
+<div className="landing-page">
   <div className="disclaimer">
     <h1>Welcome to the AI Support Bot</h1>
     <p>
-      Discover fast and context-rich answers with our AI-powered Support Bot! Version 1.0 is here for alpha testing, leveraging product documentation as a reference.
+      Discover fast and context-rich answers with our AI-powered Support Bot! Version 2.0 is here for alpha testing, leveraging product documentation as a reference.
     </p>
     <div className="highlights">
       <div className="highlight">
@@ -140,6 +140,15 @@ const App = () => {
         </ul>
       </div>
     </div>
+    <div className="highlight recent-updates">
+        <span className="update-list">🔔 Recent Updates:</span>
+        <ul>
+          <li>Introduction of an Intent Classifier to capture nuance</li>
+          <li>Enhanced Decision-Making Based on Command, Question, or Conversation langauge</li>
+          <li>Updated Documentation for New Products: Governance, Archie Bot, BB Bots</li>
+          <li>UI Improvements: Response Formatting, Sending messages using the "Enter" key</li>
+        </ul>
+      </div>
     <p>
       Encounter unexpected responses? Share your feedback with Jack Compton on Slack. Help us enhance the bot by sharing your questions and responses!
       Together, we'll make this app even cooler!
