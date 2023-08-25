@@ -122,7 +122,7 @@ const App = () => {
   <div className="disclaimer">
     <h1>Welcome to the AI Support Bot</h1>
     <p>
-      Discover fast and context-rich answers with our AI-powered Support Bot! Version 2.0 is here for alpha testing, leveraging product documentation as a reference.
+      Discover fast and context-rich answers with our AI-powered Support Bot! Version 2.0 is here for alpha testing, leveraging product and implementation documentation as a reference.
     </p>
     <div className="highlights">
       <div className="highlight">
@@ -135,7 +135,7 @@ const App = () => {
       <div className="highlight">
         <span className="not-good-list">⚠️ Where We're Improving:</span>
         <ul>
-          <li>Individual Message Processing</li>
+          <li>Persistent Message Processing</li>
           <li>Occasional Character Limit Constraints</li>
         </ul>
       </div>
@@ -143,15 +143,14 @@ const App = () => {
     <div className="highlight recent-updates">
         <span className="update-list">🔔 Recent Updates:</span>
         <ul>
-          <li>Introduction of an Intent Classifier to capture nuance</li>
-          <li>Enhanced Decision-Making Based on Command, Question, or Conversation langauge</li>
-          <li>Updated Documentation for New Products: Governance, Archie Bot, BB Bots</li>
-          <li>UI Improvements: Response Formatting, Sending messages using the "Enter" key</li>
+          <li>Introduction of an <b>Intent Classifier</b> to capture nuance in your query</li>
+          <li>Enhanced <b>Decision-Making</b> Based on <b>Command</b>, <b>Question</b>, or <b>Conversational</b> langauge</li>
+          <li>Updated Documentation for New Products: <b>Catalog Toolkit, Governance, Archie Bot, BB Bots</b></li>
+          <li>UI Improvements: <b>Response Formatting</b>, Sending messages using the <b>"Enter"</b> key</li>
         </ul>
       </div>
     <p>
       Encounter unexpected responses? Share your feedback with Jack Compton on Slack. Help us enhance the bot by sharing your questions and responses!
-      Together, we'll make this app even cooler!
     </p>
     <p>
       Happy chatting! 😄
