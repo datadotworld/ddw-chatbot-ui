@@ -3,7 +3,7 @@ const API_URL = process.env.DW_API_URL || local
 
 export const askQuestion = async (question, apiKey) => {
     try {
-        const response = await fetch('/get_response', {
+        const response = await fetch('https://ddw-chatbot-ui-7aef951365b3.herokuapp.com/get_response', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
