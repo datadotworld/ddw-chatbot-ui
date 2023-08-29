@@ -68,14 +68,8 @@ const App = () => {
   };
   
 
-  const handleApiKeyChange = (e) => {
-    setApiKey(e.target.value);
-  };
-
   const handleStartChat = () => {
-    if (apiKey.trim() !== '') {
       setShowChat(true);
-    }
   };
 
   const handleInputChange = (e) => {
@@ -156,18 +150,9 @@ const App = () => {
       Happy chatting! 😄
     </p>
   </div>
-  <div className="api-key-container">
-    <input
-      type="password"
-      className="api-key-input"
-      placeholder="Enter your OpenAI API key"
-      value={apiKey}
-      onChange={handleApiKeyChange}
-    />
     <button className="start-chat-button" onClick={handleStartChat}>
       Start Chat
     </button>
-  </div>
 </div>
       ) : (
         <div className="chat-container" ref={chatContainerRef}>
