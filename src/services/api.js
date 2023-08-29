@@ -1,9 +1,9 @@
-const live = 'https://ddw-chatbot-backend-fe4ba696a1a5.herokuapp.com.herokuapp.com/get_response'
 const local = 'http://127.0.0.1:5000/get_response'
+const API_URL = process.env.DW_API_URL || local
 
 export const askQuestion = async (question, apiKey) => {
     try {
-        const response = await fetch(live, {
+        const response = await fetch(API_URL + '/get_response', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
@@ -18,4 +18,3 @@ export const askQuestion = async (question, apiKey) => {
         console.error(error)
     }
 }
-
