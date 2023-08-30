@@ -1,7 +1,7 @@
 const local = process.env.REACT_APP_LOCAL_URL
 const heroku = process.env.REACT_APP_HEROKU_URL
 
-const API_URL = process.env.NODE_ENV === 'development' ? local : heroku
+const API_URL = process.env.NODE_ENV === 'production' ? heroku : local
 
 export const askQuestion = async (question) => {
     try {
