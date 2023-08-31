@@ -58,6 +58,7 @@ html {
   background-color: #4e5057;
   color: rgb(255,255,255);
   align-self: flex-start;
+  overflow-wrap: break-word;
 }
 
 .textbox {
