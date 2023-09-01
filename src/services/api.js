@@ -1,5 +1,3 @@
-// const local = process.env.REACT_APP_LOCAL_URL
-// const heroku = process.env.REACT_APP_HEROKU_URL
 
 const API_URL_2 = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_HEROKU_URL : process.env.REACT_APP_LOCAL_URL
 console.log(API_URL_2)
