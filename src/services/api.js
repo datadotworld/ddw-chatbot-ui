@@ -1,7 +1,7 @@
-const local = process.env.REACT_APP_LOCAL_URL
-const heroku = process.env.REACT_APP_HEROKU_URL
+// const local = process.env.REACT_APP_LOCAL_URL
+// const heroku = process.env.REACT_APP_HEROKU_URL
 
-const API_URL_2 = process.env.NODE_ENV === 'production' ? heroku : local
+const API_URL_2 = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_HEROKU_URL : process.env.REACT_APP_LOCAL_URL
 console.log(API_URL_2)
 const API_URL = 'https://ddw-chatbot-backend-fe4ba696a1a5.herokuapp.com'
 
