@@ -116,7 +116,10 @@ const App = () => {
   <div className="disclaimer">
     <h1>Welcome to the AI Support Bot</h1>
     <p>
-      Discover fast and context-rich answers with our AI-powered Support Bot! Version 2.0 is here for alpha testing, leveraging product and implementation documentation as a reference.
+      Discover fast and context-rich answers with our AI-powered Support Bot! The beta version is available now for company-wide testing.
+    </p>
+    <p>
+    Currently, the bot is referencing product, implementation, and select Confluence pages as context. If you have any documentation that you wish the bot to use, please reach out to get it added.
     </p>
     <div className="highlights">
       <div className="highlight">
